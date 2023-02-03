@@ -3,7 +3,6 @@ package how.autotest.todomvc;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
-import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ToDoMvcTest {
@@ -15,13 +14,11 @@ public class ToDoMvcTest {
         $("#new-todo").append("b").pressEnter();
         $("#new-todo").append("c").pressEnter();
 
-        $$(".todo-list>li").shouldHave(exactTexts("a","b","c"));
+        $$("#todo-list>li").shouldHave(exactTexts("a","b","c"));
 
-        $(".todo-list>li:nth-child(2)>div>.toggle").click();
+        $("#todo-list>li:nth-child(2) .toggle").click();
 
-        $$(".todo-list>.completed").shouldHave(exactTexts("b"));
-
-        $(".todo-list>li").shouldHave(exactText("a"));
-        $(".todo-list>li:nth-child(3)").shouldHave(exactText("c"));
+        $$("#todo-list>.completed").shouldHave(exactTexts("b"));
+        $$("#todo-list>:not(.completed)").shouldHave(exactTexts("a","c"));
     }
 }
