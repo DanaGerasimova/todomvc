@@ -17,7 +17,7 @@ public class ToDoMvcTest {
 
         $$(byXpath("//*[@id='todo-list']//li")).shouldHave(exactTexts("a","b","c"));
 
-        $(byXpath("//*[@id='todo-list']//li[2]//*[@class='toggle']")).click();
+        $(byXpath("//*[@id='todo-list']//li[.//text()='b']//*[@class='toggle']")).click();
 
         $$(byXpath("//*[@id='todo-list']//li[contains(concat(' ',@class,' '), " +
                 "' completed ')]")).shouldHave(exactTexts("b"));
