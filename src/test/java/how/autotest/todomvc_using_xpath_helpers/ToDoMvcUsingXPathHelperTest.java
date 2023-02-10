@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$$;
 import static how.autotest.todomvc_using_xpath_helpers.XPathHelper.*;
 
-public class ToDoMvcTestUsingXPathHelper {
+public class ToDoMvcUsingXPathHelperTest {
     @Test
     void completesTodoUsingXPathHelper(){
         open("https://todomvc.com/examples/emberjs/");
