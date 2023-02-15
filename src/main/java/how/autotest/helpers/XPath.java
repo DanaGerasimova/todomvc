@@ -1,7 +1,7 @@
 package how.autotest.helpers;
 
 public class XPath {
-    public static String predicateCssClass(String value){
+    public static String cssClass(String value){
         return "contains(concat(' ',@class,' '),' " + value + " ')";
     }
 
