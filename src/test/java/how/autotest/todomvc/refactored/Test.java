@@ -1,15 +1,12 @@
-package how.autotest.todomvc_using_xpath_helpers;
-
-import org.junit.jupiter.api.Test;
+package how.autotest.todomvc.refactored;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$$;
-import static how.autotest.helpers.XPath.*;
+import static how.autotest.selectors.xpath.utils.XPath.*;
 
-public class ToDoMvcTest {
-    @Test
+public class Test {
+    @org.junit.jupiter.api.Test
     void completesTodo(){
         open("https://todomvc.com/examples/emberjs/");
 

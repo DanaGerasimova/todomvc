@@ -1,13 +1,11 @@
 package how.autotest.todomvc;
 
-import org.junit.jupiter.api.Test;
-
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 
-public class ToDoMvcTest {
-    @Test
+public class Test {
+    @org.junit.jupiter.api.Test
     void completesTodo(){
         open("https://todomvc.com/examples/emberjs/");
 

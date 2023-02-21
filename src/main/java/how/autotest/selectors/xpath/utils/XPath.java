@@ -1,4 +1,4 @@
-package how.autotest.helpers;
+package how.autotest.selectors.xpath.utils;
 
 public class XPath {
     public static String cssClass(String value){
