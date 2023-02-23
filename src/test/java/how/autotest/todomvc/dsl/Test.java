@@ -32,7 +32,7 @@ public class Test {
                 .path())).shouldHave(exactTexts("b"));
 
         $$(byXpath(X.all().by(Its.id("todo-list"))
-                .descendant("li").byNot("completed")
+                .descendant("li").byNot(Its.cssClassContains("completed"))
                 .path())).shouldHave(exactTexts("a","c"));
     }
 }
