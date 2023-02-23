@@ -11,6 +11,6 @@ public class Its {
         return "contains(concat(' ',@class,' '),' " + value + " ')";
     }
     public static String not(String value){
-        return "not(" + value + ")";
+        return "not(" + Its.cssClassContains(value) + ")";
     }
 }
